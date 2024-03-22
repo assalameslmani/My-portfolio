@@ -309,6 +309,12 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+.skills__mysql{
+  width:60%;
+}
+.skills__c{
+  width:60%;
+}
 
 /* ===== WORK =====*/
 .work__container {

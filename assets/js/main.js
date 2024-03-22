@@ -57,14 +57,26 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        emailjs.sendForm('service_82ljmao', 'template_sh5y0gy', this)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Email sent successfully!');
-            }, function(error) {
-                console.log('FAILED...', error);
-                alert('Failed to send email. Please try again later.');
-            });
-    });
+  // Initialize EmailJS with your public key
+emailjs.init({
+    publicKey: "W85TGaH55UITrAii3"
+});
+
+// Add event listener to the form submit event
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    // Prevent default form submission
+    event.preventDefault();
+    
+    // Send the form data using EmailJS
+    emailjs.sendForm('service_ua6rzim', 'template_5zhvawd', this)
+        .then(function(response) {
+            // Handle success
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Email sent successfully!');
+        })
+        .catch(function(error) {
+            // Handle error
+            console.log('FAILED...', error);
+            alert('Failed to send email. Please try again later.');
+        });
+});
