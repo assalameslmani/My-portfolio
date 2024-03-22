@@ -281,6 +281,10 @@ img {
   margin-right: var(--mb-2);
   color: var(--first-color);
 }
+.skills__icon1{
+  width:29.8px;
+  height: 29.8px;
+}
 .skills__names {
   display: flex;
   align-items: center;
