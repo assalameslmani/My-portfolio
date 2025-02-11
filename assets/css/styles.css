@@ -221,7 +221,7 @@ img {
   fill: var(--first-color);
 }
 .home__blob-img {
-  width: 420px;
+  width: auto ;
 }
 
 /*BUTTONS*/
