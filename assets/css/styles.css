@@ -215,10 +215,13 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-    width: 430px;
-    height: 430px;
 }
-
+.home__blob {
+  fill: var(--first-color);
+}
+.home__blob-img {
+  width: auto ;
+}
 
 /*BUTTONS*/
 .button {
